@@ -48,7 +48,7 @@ allprojects {
 ```xml
 dependencies {
 	...
-	implementation 'com.beaconinside:proximity-sdk:3.0.0'
+	implementation 'com.beaconinside:proximity-sdk:3.0.1'
 }
 ```
 
