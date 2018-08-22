@@ -30,7 +30,9 @@ The minimum Android version for the SDK is Android 4.0.3 (API level 15).
 However beacon detection will only work on devices which have at least Android 4.3 Jelly Bean (API level 18)
 and support Bluetooth Low Energy (Bluetooth 4.0).
 
-1. Add the Beaconinside Maven repository to your project `build.gradle` file
+1. Make sure that your Java version is at least Java 7 >= 7u111 or Java 8 >= 8u101. Earlier version don't have the required certifacte for the Beaconinside Maven repository.
+
+2. Add the Beaconinside Maven repository to your project `build.gradle` file
 ```
 allprojects {
 	repositories {
@@ -38,13 +40,13 @@ allprojects {
 		google()
 		// Beaconinside Maven repository
 		maven {
-	        url "https://maven.beaconinside.com"
+	        	url "https://maven.beaconinside.com"
 		}
 	}
 }
 ```
 
-2. Add the dependency to your `app.gradle` file
+3. Add the dependency to your `app.gradle` file
 ```xml
 dependencies {
 	...
@@ -52,13 +54,13 @@ dependencies {
 }
 ```
 
-3. Import the ProximityService in your Main Activity:
+4. Import the ProximityService in your Main Activity:
 ```java
 	import com.beaconinside.proximitysdk.ProximityService;
 ```
 
 
-4. Copy this code to your Main Activity `onCreate()`, replace API_TOKEN with the token from https://dmp.beaconinside.com
+5. Copy this code to your Main Activity `onCreate()`, replace API_TOKEN with the token from https://dmp.beaconinside.com
 ```java
 	ProximityService.init(this, API_TOKEN);
 ```
