@@ -50,7 +50,7 @@ allprojects {
 ```xml
 dependencies {
 	...
-	implementation 'com.beaconinside:proximity-sdk:3.1.3'
+	implementation 'com.beaconinside:proximity-sdk:3.1.4'
 }
 ```
 
@@ -144,6 +144,8 @@ To get the broadcasts you have to register a BroadcastReceiver with an IntentFil
 	ProximityService.INTENT_BEACON_REGION_ENTER
 	ProximityService.INTENT_BEACON_REGION_UPDATE
 	ProximityService.INTENT_BEACON_REGION_EXIT
+    ProximityService.INTENT_BEACON_REGION_TRANSITION
+
 
 	ProximityService.INTENT_GEOFENCE_ENTER
 	ProximityService.INTENT_GEOFENCE_EXIT
@@ -168,6 +170,9 @@ public class ProximityServiceBroadcastReceiver extends BroadcastReceiver {
                 break;
             case ProximityService.INTENT_BEACON_REGION_EXIT:
                 Log.d("BI", "REGION EXIT " + intent.getStringExtra(ProximityService.INTENT_EXTRA_BEACON_ID));
+                break;
+            case ProximityService.INTENT_BEACON_REGION_TRANSITION:
+                Log.d("BI", "REGION TRANSITION " + intent.getExtras().toString());
                 break;
             case ProximityService.INTENT_BEACON_REGION_UPDATE:
                 Log.d("BI", "REGION UPDATE rssi: " + intent.getIntExtra(ProximityService.INTENT_EXTRA_RSSI, 0)
