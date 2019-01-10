@@ -60,7 +60,7 @@ dependencies {
 ```
 
 
-5. Copy this code to your Main Activity `onCreate()`, replace API_TOKEN with the token from https://dmp.beaconinside.com
+5. Copy this code to your Main Activity `onCreate()`, replace API_TOKEN with the token from https://proximitydmp.com
 ```java
 	ProximityService.init(this, API_TOKEN);
 ```
@@ -104,11 +104,11 @@ background till ProximityService.terminate() is called.
 
 ### Usage Guides
 
-* [Campaign Demo Guide](http://developers.beaconinside.com/docs/demoing-beacons-and-geofences)
-* [Setting up a virtual beacon](http://developers.beaconinside.com/docs/virtual-ibeacon)
-* [Getting started with geofencing](http://developers.beaconinside.com/docs/geofencing-getting-started)
-* [Advantages SDK over API](http://developers.beaconinside.com/docs/sdk-vs-api-integration)
-* [SDK battery drain analysis](http://developers.beaconinside.com/docs/sdk-battery-drain)
+* [Campaign Demo Guide](http://developers.proximitydmp.com/docs/demoing-beacons-and-geofences)
+* [Setting up a virtual beacon](http://developers.proximitydmp.com/docs/virtual-ibeacon)
+* [Getting started with geofencing](http://developers.proximitydmp.com/docs/geofencing-getting-started)
+* [Advantages SDK over API](http://developers.proximitydmp.com/docs/sdk-vs-api-integration)
+* [SDK battery drain analysis](http://developers.proximitydmp.com/docs/sdk-battery-drain)
 
 ## Advanced features
 
@@ -154,7 +154,7 @@ To get the broadcasts you have to register a BroadcastReceiver with an IntentFil
 	ProximityService.INTENT_CAMPAIGN_CONVERSION
 
 Additionally you get meta information about the beacon e.g. uuid, major, minor rssi and proximity.
-You will also get the beacon meta data you entered the [infrastructure management](https://dmp.beaconinside.com)
+You will also get the beacon meta data you entered the [infrastructure management](https://proximitydmp.com)
 
 - ProximityServiceBroadcastReceiver.java
 
@@ -244,13 +244,13 @@ All data can be accessed via server-side APIs. Take a look at the [Beaconinside 
 
 ## Support
 
-Just [drop us](mailto:support@beaconinside.com) a message if there are any issues or questions.
+Just [drop us](mailto:support@proximitydmp.com) a message if there are any issues or questions.
 
 ## License
 
 Copyright (c) 2014-2018 Beaconinside GmbH. All rights reserved.
 
-[dev-hub]: http://developers.beaconinside.com
+[dev-hub]: http://developers.proximitydmp.com
 [beaconinside]: https://www.beaconinside.com
-[dmp]: https://dmp.beaconinside.com
+[dmp]: https://proximitydmp.com
 [releases]: https://github.com/beaconinside/android-sdk/releases
