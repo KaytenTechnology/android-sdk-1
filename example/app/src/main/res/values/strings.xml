@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ProximityServiceExample</string>
+    <string name="permission_rationale_location">This app wants to access your location</string>
+</resources>
