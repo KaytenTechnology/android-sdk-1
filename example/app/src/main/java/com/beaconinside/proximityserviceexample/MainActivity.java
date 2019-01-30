@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
         initServiceWithToken();
         IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction("BeaconServiceRegionEnter");
-        intentFilter.addAction("BeaconServiceRegionExit");
-        intentFilter.addAction("BeaconServiceRegionUpdate");
-        intentFilter.addAction("GeofenceServiceRegionEnter");
-        intentFilter.addAction("GeofenceServiceRegionExit");
-        intentFilter.addAction("CampaignNotification");
-        intentFilter.addAction("CampaignConversion");
+        intentFilter.addAction(ProximityService.INTENT_BEACON_REGION_ENTER);
+        intentFilter.addAction(ProximityService.INTENT_BEACON_REGION_EXIT);
+        intentFilter.addAction(ProximityService.INTENT_BEACON_REGION_UPDATE);
+        intentFilter.addAction(ProximityService.INTENT_GEOFENCE_ENTER);
+        intentFilter.addAction(ProximityService.INTENT_GEOFENCE_EXIT);
+        intentFilter.addAction(ProximityService.INTENT_CAMPAIGN_NOTIFICATION);
+        intentFilter.addAction(ProximityService.INTENT_CAMPAIGN_CONVERSION);
         this.registerReceiver(broadcastReceiver, intentFilter);
     }
 
