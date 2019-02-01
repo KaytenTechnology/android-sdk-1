@@ -21,7 +21,6 @@ The Beaconinside SDK simplifies the integration of beacons, geofences and proxim
     + [Webhooks](#webhooks)
     + [Access the API](#access-the-api)
   * [Support](#support)
-  * [License](#license)
 
 
 ## Integrate the SDK
@@ -246,9 +245,6 @@ All data can be accessed via server-side APIs. Take a look at the [Beaconinside 
 
 Just [drop us](mailto:support@proximitydmp.com) a message if there are any issues or questions.
 
-## License
-
-Copyright (c) 2014-2018 Beaconinside GmbH. All rights reserved.
 
 [dev-hub]: http://developers.proximitydmp.com
 [beaconinside]: https://www.beaconinside.com
