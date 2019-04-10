@@ -4,7 +4,7 @@ Proximity Service SDK for Android
 
 # Summary
 
-The Beaconinside SDK simplifies the integration of beacons, geofences and proximity services into your mobile app. A Beaconinside application token is required, [sign up for free][dmp].
+The Proximity SDK simplifies the integration of beacons, geofences and proximity services into your mobile app. A Proximity DMP application token is required, [sign up for free][dmp].
 
 ## Table of contents
 
@@ -29,17 +29,17 @@ The minimum Android version for the SDK is Android 4.0.3 (API level 15).
 However beacon detection will only work on devices which have at least Android 4.3 Jelly Bean (API level 18)
 and support Bluetooth Low Energy (Bluetooth 4.0).
 
-1. Make sure that your Java version is at least Java 7 >= 7u111 or Java 8 >= 8u101. Earlier version don't have the required certifacte for the Beaconinside Maven repository.
+1. Make sure that your Java version is at least Java 7 >= 7u111 or Java 8 >= 8u101. Earlier version don't have the required certifacte for the Square Metrics Maven repository.
 
-2. Add the Beaconinside Maven repository to your project `build.gradle` file
+2. Add the Square Metrics Maven repository to your project `build.gradle` file
 ```
 allprojects {
 	repositories {
 		jcenter()
 		google()
-		// Beaconinside Maven repository
+		// Square Metrics Maven repository
 		maven {
-	        	url "https://maven.beaconinside.com"
+	        	url "https://maven.proximitydmp.com"
 		}
 	}
 }
@@ -49,7 +49,7 @@ allprojects {
 ```xml
 dependencies {
 	...
-	implementation 'com.beaconinside:proximity-sdk:3.1.5'
+	implementation 'com.proximitydmp:proximity-sdk:3.1.5'
 }
 ```
 
@@ -90,7 +90,7 @@ background till ProximityService.terminate() is called.
 
 ### Account setup
 
-* Sign up for a [Beaconinside Account][dmp] to access the web and mobile dashboards to manage all beacons, geofences and proximity services.
+* Sign up for a [Proximity DMP Account][dmp] to access the web and mobile dashboards to manage all beacons, geofences and proximity services.
 
 * Add nearby beacons and/or geofences in *MANAGE* for initial testing. For beacons you should select the right vendor and UUID, Major and Minor values.
 
@@ -187,7 +187,7 @@ public class ProximityServiceBroadcastReceiver extends BroadcastReceiver {
                 } else if (ProximityService.CAMPAIGN_TYPE_CUSTOM.equals(campaignType)) {
                     // Implementation of notification handling required
 
-                    // Get the campaign data specified in the Beaconinside DMP Campaign interface
+                    // Get the campaign data specified in the Proximity DMP DMP Campaign interface
                     String data = intent.getStringExtra(MY_CUSTOM_KEY);
 
                     // Show notification
@@ -239,7 +239,7 @@ In the web panel you can set up webhooks to get server-side user interaction eve
 
 ### Access the API
 
-All data can be accessed via server-side APIs. Take a look at the [Beaconinside Developer Hub][dev-hub] for the public Manager and Analytics API reference.
+All data can be accessed via server-side APIs. Take a look at the [Square Metrics Developer Hub][dev-hub] for the public Manager and Analytics API reference.
 
 ## Support
 
@@ -247,6 +247,6 @@ Just [drop us](mailto:support@proximitydmp.com) a message if there are any issue
 
 
 [dev-hub]: http://developers.proximitydmp.com
-[beaconinside]: https://www.beaconinside.com
+[squaremetrics]: https://www.squaremetrics.com
 [dmp]: https://proximitydmp.com
-[releases]: https://github.com/beaconinside/android-sdk/releases
+[releases]: https://github.com/squaremetrics/android-sdk/releases
